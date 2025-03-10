@@ -1,0 +1,1 @@
+Tracks daily loyalty claims and puts totals by batch number into excel workbook
