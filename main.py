@@ -1,11 +1,12 @@
 import pandas as pd
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, NamedStyle, Font
+import os
+
 
 # Files
-monthly_Shifts = 'Monthly Shift Summary.csv'
-
-tender_file = 'Tender Provider Detail - Transaction Date Range.csv'
+monthly_Shifts = 'Files/Monthly Shift Summary.csv'
+tender_file = 'Files/Tender Provider Detail - Transaction Date Range.csv'
 
 # List of filteres data
 shifts = []
@@ -83,3 +84,5 @@ ws.column_dimensions['B'].width = 7.97
 # Save the file
 wb.save("Daily Loyalty.xlsx")
 wb.close()
+
+os.system('start "EXCEL.EXE" "Daily Loyalty.xlsx"')
